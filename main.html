@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuizVelocity | Fun Quizzes for Students and Learners</title>
+  <meta name="description" content="Boost your brainpower with fun, fast, and free quizzes! QuizVelocity offers engaging quizzes for students and curious minds of all ages.">
+  <meta name="keywords" content="fun quizzes for students, online quiz games, educational quizzes, quiz website for learners, general knowledge quiz, quiz for school students, learning through quizzes, QuizVelocity site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      text-align: center;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 80%;
+      max-width: 640px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    #quizBtn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #quizBtn:hover {
+      background-color: #ff1493;
+    }
+
+    #timer {
+      font-size: 20px;
+      margin-top: 15px;
+      color: #222;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to QuizVelocity</h1>
+
+  <video id="quizVideo" controls>
+    <source src="quiz1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div id="timer">Timer: <span id="countdown">00:00</span></div>
+
+  <button id="quizBtn" onclick="startQuiz()">Start Quiz</button>
+
+  <script>
+    let seconds = 0;
+    const countdownEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      seconds++;
+      const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const sec = String(seconds % 60).padStart(2, '0');
+      countdownEl.textContent = `${min}:${sec}`;
+    }, 1000);
+
+    function startQuiz() {
+      alert("Quiz will start now! (Feature coming soon)");
+    }
+  </script>
+</body>
+</html>
